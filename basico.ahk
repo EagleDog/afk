@@ -1,7 +1,7 @@
 ;afs.ahk
 ;ExitApp
 
-Pause On
+Pause Off
 
 Chakra() {				;------------------  CHAKRA
 	While 1 = 1 {
@@ -26,5 +26,5 @@ Espada() {        ;------------------  ESPADA
 ^+c::Chakra()        ; ctrl + shift + c
 ^+e::Espada()        ; ctrl + shift + e
 
-^+z::Pause           ; ctrl + shift + z
+^+p::Pause           ; ctrl + shift + p
 ^+x::ExitApp         ; ctrl + shift + x
