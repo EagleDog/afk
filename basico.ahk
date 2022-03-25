@@ -3,23 +3,22 @@
 
 Pause Off
 
-Chakra() {				;------------------  CHAKRA
+
+Chakra() {       ;------------------  CHAKRA
 	While 1 = 1 {
 		Sleep, 795
 		Send, 3
 	}
 }
 
-
-Espada() {        ;------------------  ESPADA
+Espada() {       ;------------------  ESPADA
 	while 1 = 1 {
 		Sleep, 100
 		Click, 200, 200
 	}
 }
 
-
-;______________________________________________________________________
+;____________________________________________
 
 ; ========= KEYBOARD SHORTCUTS ==========
 
@@ -28,3 +27,4 @@ Espada() {        ;------------------  ESPADA
 
 ^+p::Pause           ; ctrl + shift + p
 ^+x::ExitApp         ; ctrl + shift + x
+
