@@ -22,7 +22,7 @@ vote_go := 1
 siege := 0             ; MAIN OPTIONS    <<==_____________
 reconnect_go := 1
 
-which_training  := 3   ;(0=Z 1=A, 2=Chakra, 3=D, 4=1v1, 5=G)
+which_training  := 1   ;(0=Z 1=A, 2=Chakra, 3=D, 4=1v1, 5=G)
 
 weapon          := 4   ;(1,2,3,4)
 pre_weapon      := 1
@@ -33,8 +33,27 @@ deploy_super := 1      ;                           OPTIONS
 
 ;____________________________________________________________________
 
+vote_click := [760, 455]
+train_click_boss := [690, 570]
+train_click_jugg := [690, 300]
+train_click_ffa := [625, 250]
+train_click_1v1 := [690, 460]
+train_click := [840, 470] ;[1100, 450] ;[625, 250]
 
-screen_mode := "small"  ;"big" "both" "small" "very_small"
+player_spot := [50, 425] ;80, 590
+champion_spot_0 := [200, 400]
+champion_spot_1 := [480, 410] ;tatashi
+champion_spot_2 := [620, 410] ;zenitsu
+champion_spot_3 := [760, 410] ;marco
+champion_spot_4 := [900, 410] ;pebble lee
+champion_summon := [1100, 455]
+
+reconnect_button := [840, 470]
+play_button := [570, 560]
+;____________________________________________________________________
+
+
+screen_mode := "normal"  ;"big" "both" "small" "very_small"
 
 ;____________________________________________________________________
 
@@ -91,7 +110,7 @@ else if (screen_mode = "small") {                                   ; ---- scree
   champion_spot_3 := [1050, 570] ;marco
   champion_spot_4 := [1250, 570] ;pebble lee
   champion_summon := [10, 10]
-} else {                  ;screen_mode "big"                  ; ---- screen_mode "big" ----
+} else if (screen_mode = "big") {   ;screen_mode "big"              ; ---- screen_mode "big" ----
   vote_click := [760, 445]
   train_click_boss := [690, 570]
   train_click_jugg := [690, 300]
@@ -153,10 +172,10 @@ While 1 = 1 {                                  ; ==============   MAIN LOOP
     If (reconnect_go = 1) {
 
       ClickReconnectButton(RCB[1], RCB[2])
-      Sleep, 500
+      Sleep, 200
 
       ClickPlayButton(PLB[1], PLB[2])
-      Sleep, 500
+      Sleep, 200
     }
 
     GetWeapon(pre_weapon, weapon)
