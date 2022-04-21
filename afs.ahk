@@ -22,7 +22,7 @@ vote_go := 1
 siege := 0             ; MAIN OPTIONS    <<==_____________
 reconnect_go := 1
 
-which_training  := 1   ;(0=Z 1=A, 2=Chakra, 3=D, 4=1v1, 5=G)
+which_training  := 3   ;(0=Z 1=A, 2=Chakra, 3=D, 4=1v1, 5=G)
 
 weapon          := 4   ;(1,2,3,4)
 pre_weapon      := 1
